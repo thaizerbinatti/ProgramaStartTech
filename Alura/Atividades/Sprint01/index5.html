@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+    function pularLinha() {
+        document.write("<br>")
+    }
+
+    function escreva(frase) {
+        document.write(frase)
+    }
+
+    function lista(item) {
+        document.write("<strong>" + "<ul>" + "<li>" + item + "</li>" + "</ul>" + "</strong>")
+    }
+
+    escreva("<h1>" + ">> COMEX <<" + "</h1>")
+    escreva("<hr>")
+
+    escreva("<h3>" + "1. Visão do Produto" + "</h3>")
+    escreva("O projeto" + "<strong> Comex </strong>" + "é um sistema de e-commerce marketplace. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.")
+    pularLinha()
+
+    escreva("<h3>" + "2. Entidades Importantes" + "</h3>")
+    lista("Produto")
+    lista("Categoria")
+    lista("Cliente")
+    lista("Pedido")
+    lista("ItemDePedido")
+</script>

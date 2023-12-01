@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 3</title>
+</head>
+
+<body>
+    <!-- JavaScript -->
+    <script>
+
+        // Funções
+        function pularLinha() {
+            document.write("<br>")
+        }
+    
+        function texto(frase) {
+            document.write(frase)
+        }
+    
+        function lista(item) {
+            document.write("<ul>" + "<li>" + "<strong>" + item + "</strong>" + "</li>" + "</ul>")
+        }
+    
+        // Título
+        texto("<h1>" + ">> COMEX <<" + "</h1>")
+        texto("<hr>")
+    
+        // Tópico 1
+        texto("<h3>" + "1. Visão do Produto" + "</h3>")
+        texto("O projeto" + "<strong> Comex </strong>" + "é um sistema de e-commerce marketplace. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.")
+        pularLinha()
+       
+        // Tópico 2
+        texto("<h3>" + "2. Entidades Importantes" + "</h3>")
+        lista("Produto")
+        lista("Categoria")
+        lista("Cliente")
+        lista("Pedido")
+        lista("ItemDePedido")
+
+        // Tópico 3
+        texto("<h3>" + "3. Requisitos não funcionais" + "</h3>")
+        lista("Manutenibilidade")
+
+        // Tópico 4
+        texto("<h3>" + "4. Requisitos funcionais" + "</h3>")
+        texto("<p>" + "Os requisitos funcionais são divididos em três categorias no Comex:" + "</p>")
+        texto("<p>" + "<strong>" + "Essencial:" + "</strong>" + " implementação obrigatória para o sistema atingir seu objetivo principal;" + "</p>")
+        texto("<p>" + "<strong>" + "Importante:" + "</strong>" + " acrescentam muito valor ao negócio;" + "</p>")
+        texto("<p>" + "<strong>" + "Desejável:" + "</strong>" + " incrementam usabilidade e funcionalidades." + "</p>")
+
+        // Rodapé
+        texto("<hr>" + "<p>" + "<strong>" + " .:: Alura LEVEL UP ::. " + "</strong>" + "</p>")
+
+        // Alert
+        alert("Bem vindos ao COMEX")
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 5 - Funções</title>
+</head>
+
+<body>
+    <!-- JavaScript -->
+    <script>
+
+        // Funções
+        function mostrarCabecalho() {
+            document.write("<h1>" + ">> COMEX <<" + "</h1>" + "<hr>")
+        }
+
+        function mostrarConteudo() {
+            document.write("<h3>" + titulo1 + "</h3>")
+            document.write("O projeto" + "<strong> Comex </strong>" + "é um sistema de e-commerce marketplace. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.")
+            document.write("<br>")
+            document.write("<h3>" + titulo2 + "</h3>")
+            document.write("<ul> <strong> <li>Produto</li> <li>Categoria</li> <li>Cliente</li> <li>Pedido</li> <li>ItemDePedido</li> </strong> </ul>")
+            document.write("<h3>" + titulo3 + "</h3>")
+            document.write("<ul> <strong> <li>Manutenibilidade</li> </strong> </ul>")
+            document.write("<h3>" + titulo4 + "</h3>")
+            document.write("<p>" + "Os requisitos funcionais são divididos em três categorias no Comex:" + "</p>")
+            document.write("<p>" + "<strong>" + "Essencial:" + "</strong>" + " implementação obrigatória para o sistema atingir seu objetivo principal;" + "</p>")
+            document.write("<p>" + "<strong>" + "Importante:" + "</strong>" + " acrescentam muito valor ao negócio;" + "</p>")
+            document.write("<p>" + "<strong>" + "Desejável:" + "</strong>" + " incrementam usabilidade e funcionalidades." + "</p>")
+        }
+
+        function mostrarRodape() {
+            document.write("<hr>" + "<p>" + "<strong>" + " .:: Alura LEVEL UP ::. " + "</strong>" + "</p>")
+        }
+
+        //Variáveis
+        var titulo1 = "1. Visão do Produto"
+        var titulo2 = "2. Entidades Importantes"
+        var titulo3 = "3. Requisitos não funcionais"
+        var titulo4 = "4. Requisitos funcionais"
+
+        // Cabeçalho
+        mostrarCabecalho();
+
+        // Contéudo
+        mostrarConteudo();
+
+        // Rodapé
+        mostrarRodape();
+
+    </script>
+</body>
+
+</html>

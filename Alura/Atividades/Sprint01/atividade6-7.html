@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 6 e 7 - Listagem</title>
+</head>
+
+<body>
+    <!-- JavaScript -->
+    <script>
+
+        // Funções
+        function pularLinha() {
+            document.write("<br> <br>")
+        }
+
+        function mostrar(frase) {
+            document.write(frase)
+        }
+
+        function mostrarCabecalho() {
+            mostrar("<h1>" + ">> COMEX <<" + "</h1>")
+        }
+
+        function mostrarConteudo() {
+            mostrar("<h2>" + ":: Lista de Clientes" + "</h2>" + "<hr>")
+            mostrar("<h3> - Código: 1 </h3>")
+            listaClientes("Fulano", "Fevereiro", 1980)
+            mostrar("<hr>")
+
+            mostrar("<h3> - Código: 2 </h3>")
+            listaClientes("Beltrano", "Maio", 1981)
+            mostrar("<hr>")
+
+            mostrar("<h3> - Código: 3 </h3>")
+            listaClientes("Sicrano", "Novembro", 1984)
+            mostrar("<hr>")
+        }
+
+        function listaClientes(nome, mes, ano) {
+            mostrar("<p>" + "Nome: " + nome + "</p>")
+            mostrar("<p>" + "Mês de nascimento: " + mes + "</p>")
+            mostrar("<p>" + "Ano de nascimento: " + ano + "</p>")
+        }
+
+        function mostrarRodape() {
+            mostrar("<hr>" + "<p>" + "<strong>" + " .:: Alura LEVEL UP ::. " + "</strong>" + "</p>")
+        }
+
+        //Estatística
+
+        function idade(anoNascimento) {
+            var anoAtual = 2023
+            return anoAtual - anoNascimento
+        }
+
+        function calculoSomaIdades() {
+            var somaIdade = idade(1980) + idade(1981) + idade(1984)
+            mostrar("Soma das idades: " + somaIdade)
+            pularLinha()
+        }
+
+        function calculoMediaIdades() {
+            var mediaIdade = (idade(1980) + idade(1981) + idade(1984)) / 3
+            mostrar("Média das idades: " + Math.round(mediaIdade));
+        }
+
+        // Cabeçalho
+        mostrarCabecalho();
+
+        // Contéudo
+        mostrarConteudo();
+
+        //Estatística
+        document.write("*** Estatística: ***")
+        pularLinha()
+        calculoSomaIdades()
+        calculoMediaIdades()
+
+        // Rodapé
+        mostrarRodape();
+
+    </script>
+</body>
+
+</html>

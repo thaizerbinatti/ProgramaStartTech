@@ -1,20 +1,38 @@
-<!-- Exercicios Plataforma Alura -->
-
-<meta charset="UTF-8">
 <script>
-
     function pulaLinha() {
-        document.write("<br><hr><br>"); //adc tags br e hr
+
+        document.write("<br>");
     }
 
     function mostra(frase) {
-        document.write("<big>" + frase + "</big>"); // adc tag big
+
+        document.write(frase);
         pulaLinha();
     }
 
-    var ano = 2019;
-    mostra("Eu nasci em : " + (ano - 25));
-    mostra("Adriano nasceu em : " + (ano - 26));
-    mostra("Paulo nasceu em : " + (ano - 32));
+    function sorteia() {
 
+        return Math.round(Math.random() * 100);
+    }
+
+    // funções pulaLinha, mostra e sorteia omitidas
+
+    var numeroPensado = sorteia();
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if (chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+
+        var contador = 1;
+
+        while (contador <= 10) {
+
+            mostra("Já era, você errou!");
+            contador = contador + 1; //defini a qtdd de frases que vai mostrar no navegador e fim no looping
+        }
+
+    }
 </script>

@@ -17,28 +17,39 @@
     <main>
         <div>
             <h3> :: Cadastro de Categorias</h3>
-            <hr>
+            <hr><br>
             <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
-            </form>
-            <button onclick="button">Criar</button><hr>
+                <label for="nome">Categoria:</label>
+                <input type="text" id="categoria" required><br>
+            </form><br>
+            <button onclick="adicionarCategoria()">Criar</button><br><br>
+            <hr>
         </div>
         <div>
-            <h3> :: Lista de Categorias</h3><hr>
+            <h3> :: Lista de Categorias</h3>
+            <div id="listaCategorias"></div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p><strong>.:: Alura Level Up ::.</strong></p>
-    </footer>
-
-    <!-- Java Script -->
+    <!-- JavaScript -->
     <script>
 
-        function adicionarLista() {
-            
+        //Variável iniciando contagem
+        let codigo = 1;
+
+        //Função para adicionar categoria
+        function adicionarCategoria() {
+            let adcCategoria = document.getElementById("categoria").value;
+            let listaCategorias = document.getElementById("listaCategorias");
+            let novaCategoria = document.createElement("p");
+
+            novaCategoria.textContent = "Código: " + codigo + " —— " + adcCategoria;
+
+            listaCategorias.appendChild(novaCategoria);
+
+            document.getElementById("categoria").value = "";
+
+            codigo++;
         }
 
     </script>

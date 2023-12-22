@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1> >> COMEX << </h1>
+    </header>
+
+    <!-- Contéudo -->
+    <main>
+        <div>
+            <h3> :: Cadastro de Categorias</h3>
+            <hr><br>
+            <form>
+                <label for="nome">Categoria:</label>
+                <input type="text" id="categoria" required><br>
+            </form><br>
+            <button onclick="adicionarCategoria()">Criar</button><br><br>
+            <hr>
+        </div>
+        <div>
+            <h3> :: Lista de Categorias</h3>
+            <div id="listaCategorias"></div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+
+        //Variável iniciando contagem
+        let codigo = 1;
+
+        //Função para adicionar categoria
+        function adicionarCategoria() {
+            let adcCategoria = document.getElementById("categoria").value;
+            let listaCategorias = document.getElementById("listaCategorias");
+            let novaCategoria = document.createElement("p");
+
+            //Validação de caracteres
+            if (adcCategoria.length <= 0) {
+                alert("ERRO: Campo vazio! Preencha novamente.");
+                return;
+            }
+
+            novaCategoria.textContent = "Código: " + codigo + " —— " + adcCategoria;
+
+            listaCategorias.appendChild(novaCategoria);
+
+            document.getElementById("categoria").value = "";
+
+            codigo++;
+        }
+
+    </script>
+</body>
+
+</html>
